@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendaftaran Ekstrakurikuler</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Form Pendaftaran -->
+    <div class="form-section">
+      <div class="form-header">
+        <h2>Formulir Pendaftaran</h2>
+        <p>Lengkapi data diri kamu dengan benar di bawah ini.</p>
+      </div>
+
+      <form id="ekstraForm">
+        <div class="input-group">
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" placeholder="Contoh: Ahmad Rizky" required>
+        </div>
+
+        <div class="input-group">
+          <label for="email">Alamat Email</label>
+          <input type="email" id="email" placeholder="nama@email.com" required>
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password (Angka saja)</label>
+          <input type="password" id="password" pattern="[0-9]+" placeholder="Masukkan minimal 8 angka" required>
+        </div>
+
+        <div class="input-group">
+          <label for="konfirmasi">Konfirmasi Password</label>
+          <input type="password" id="konfirmasi" pattern="[0-9]+" placeholder="Ulangi password angka" required>
+        </div>
+
+        <div class="input-group">
+          <label for="ekstra">Pilihan Ekstrakurikuler</label>
+          <select id="ekstra" required>
+            <option value="" disabled selected>-- Pilih Ekstrakurikuler --</option>
+            <option value="Pramuka">Pramuka</option>
+            <option value="Paskibra">Paskibra</option>
+            <option value="PMR">PMR</option>
+            <option value="Jurnalistik">Jurnalistik</option>
+            <option value="Futsal">Futsal</option>
+            <option value="Volly">Volly</option>
+            <option value="Bahasa Jepang">Bahasa Jepang</option>
+            <option value="Seni Tari">Seni Tari</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-submit">Kirim Pendaftaran</button>
+      </form>
+    </div>
+
+    <!-- Informasi Ekstrakurikuler -->
+    <div class="info-section">
+      <div>
+        <span class="badge">● Pendaftaran Dibuka</span>
+        <h1 class="info-title">Gabung Komunitas Ekstrakurikuler</h1>
+        <p class="info-desc">Asah bakat, tingkatkan keterampilan, dan temukan teman baru lewat berbagai kegiatan seru.</p>
+        
+        <div class="tag-container">
+          <span class="tag">Pramuka</span>
+          <span class="tag">Paskibra</span>
+          <span class="tag">PMR</span>
+          <span class="tag">Drumband</span>
+          <span class="tag">Rohis</span>
+          <span class="tag">Seni Tari</span>
+          <span class="tag">Pencak Silat</span>
+          <span class="tag">Bahasa Jepang</span>
+          <span class="tag">Volly</span>
+          <span class="tag">Futsal</span>
+          <span class="tag">Rebana</span>
+          <span class="tag">Jurnalistik</span>
+          <span class="tag">Paduan Suara</span>
+        </div>
+      </div>
+
+      <div class="info-footer">
+        <p>Gunakan kesempatan ini untuk mengeksplorasi minat kamu!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Component Chatbot -->
+  <button class="chat-toggle-btn" id="chatToggleBtn">💬</button>
+
+  <div class="chat-window" id="chatWindow">
+    <div class="chat-header">
+      <div>
+        <h3>Asisten Ekskul</h3>
+        <p>Online | Tanya seputar pendaftaran</p>
+      </div>
+      <button class="chat-close-btn" id="chatCloseBtn">&times;</button>
+    </div>
+
+    <div class="chat-messages" id="chatMessages">
+      <div class="message bot">
+        Halo! Ada yang bisa saya bantu terkait pendaftaran ekstrakurikuler? 😊
+      </div>
+    </div>
+
+    <div class="chat-input-area">
+      <input type="text" id="chatInput" placeholder="Tulis pertanyaan...">
+      <button id="sendChatBtn">Kirim</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
